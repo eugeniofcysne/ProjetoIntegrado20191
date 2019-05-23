@@ -12,7 +12,7 @@ public class ConexaoDB {
 	public static  Connection getConexao() {
 		Connection conn = null;
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projetointegrado?user=root&password=cebola123");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projetointegrado?user=root&password=cebola123&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
 		} catch (SQLException e) {
 			// tratar erros
 			e.printStackTrace();
