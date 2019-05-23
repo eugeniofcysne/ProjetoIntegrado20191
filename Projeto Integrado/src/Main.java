@@ -12,9 +12,9 @@ public class Main {
 	
 	protected static void executarResponsavel() {
 		//criar o objeto Responsável
-		Responsavel pai = new Responsavel();
+		Responsavel responsavel = new Responsavel("joao","04813856900" , "5050105", "03/07/1990", 1, "rua joão paulo, 2379", "48 991729832");
 		ResponsavelController controller = new ResponsavelController();
-		controller.persistir(pai);
+		controller.persistir(responsavel);
 	}
 	protected static void executarAluno() {
 		
