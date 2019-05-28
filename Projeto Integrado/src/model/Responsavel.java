@@ -5,6 +5,7 @@ public class Responsavel extends Pessoa{
 	private String enderecoResponsavel;
 	private String telefoneResponsavel;
 	
+	
 	public Responsavel(String nome, String CPF, String RG, String dataNascimento, int codResponsavel, 
 			String enderecoResponsavel, String telefoneResponsavel) {
 		
@@ -14,6 +15,18 @@ public class Responsavel extends Pessoa{
 		this.enderecoResponsavel=enderecoResponsavel;
 		this.telefoneResponsavel=telefoneResponsavel;
 		// TODO Auto-generated constructor stub
+	}
+
+	public int getCodResponsavel() {
+		return codResponsavel;
+	}
+
+	public String getEnderecoResponsavel() {
+		return enderecoResponsavel;
+	}
+
+	public String getTelefoneResponsavel() {
+		return telefoneResponsavel;
 	}
 
 	

@@ -20,10 +20,15 @@ public class ResponsavelController {
 	public void persistir(Responsavel responsavel) {
 		this.repository.persistir(responsavel);
 	}
-	public Responsavel consultar (int id) {
-		return null;
+
+	public void remover (int codResponsavel){
+		this.repository.remover(codResponsavel);
 	}
-	public void remover (int id){
-		
+	
+	public void alterar (int codResponsavel, String novoNome){
+		this.repository.alterar(codResponsavel, novoNome);
+	}
+	public void consultar (int codResponsavel){
+		this.repository.consultar(codResponsavel);
 	}
 }
