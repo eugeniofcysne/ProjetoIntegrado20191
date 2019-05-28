@@ -22,6 +22,18 @@ public class Pessoa {
 		this.RG=RG;
 		this.dataNascimento=dataNascimento;
 	}
+	public String getNome() {
+		return nome;
+	}
+	public String getCPF() {
+		return CPF;
+	}
+	public String getRG() {
+		return RG;
+	}
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
 	
 	
 }
