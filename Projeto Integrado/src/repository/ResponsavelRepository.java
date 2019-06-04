@@ -28,13 +28,10 @@ public class ResponsavelRepository {
 
 	public void persistir(Responsavel responsavel) {
 		Connection conn = ConexaoDB.getConexao();
-		String sql;
+		String sql = null;
 
 		Statement stmtUpdate;
-
-		sql = "insert into responsavel values (null, '";
-
-		sql = sql.concat(responsavel.getNome());
+	sql = sql.concat(responsavel.getNome());
 		sql = sql.concat("','");
 		sql = sql.concat(responsavel.getCPF());
 		sql = sql.concat("','");
@@ -46,6 +43,9 @@ public class ResponsavelRepository {
 		sql = sql.concat("','");
 		sql = sql.concat(responsavel.getEnderecoResponsavel());
 		sql = sql.concat("');");
+		sql = "insert into responsavel values (null, '";
+
+	
 
 		System.out.println(sql);
 

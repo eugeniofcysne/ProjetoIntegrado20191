@@ -1,5 +1,4 @@
 package controller;
-import model.Pessoa;
 import model.Responsavel;
 import repository.ResponsavelRepository;
 

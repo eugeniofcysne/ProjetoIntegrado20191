@@ -1,13 +1,20 @@
 import java.util.Scanner;
 
+import controller.AlunoController;
+import controller.RegistroController;
 import controller.ResponsavelController;
+import model.Aluno;
+import model.Registro;
 import model.Responsavel;
 
 public class Main {
 
 	public static void main (String[] args) {
-		//executarAluno();
+		executarAluno();
 		executarResponsavel();
+		executarRegistro(); 
+		
+		
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("digite o codResponsavel que quer apagar. Ou digite 0 para sair");
 		int decisaoUser = scanner.nextInt();
@@ -57,7 +64,46 @@ public class Main {
 	
 	
 	protected static void executarAluno() {
-		
-	}
+		//criar o objeto Aluni
+				Aluno aluno = new Aluno(null, null, null, 0, null, 0);
+				AlunoController controller = new AlunoController();
+				controller.persistir(aluno);
+			}
+			protected static void removerAluno(int codAluno) {
+				AlunoController controller = new AlunoController();
+				controller.remover(codAluno);
+			}
+			
+			protected static void alterarAluno(int codAluno, String novoNome) {
+				AlunoController controller = new AlunoController();
+				controller.alterar(codAluno, novoNome);
+			}
+			protected static void consultarAluno1(int codAluno) {
+				AlunoController controller = new AlunoController();
+				controller.consultar(codAluno);
+			}
 	
+
+protected static void executarRegistro() {
+	//criar o objeto Registro
+			Registro registro = new Registro(null, "12:00:00", "15:00:00", 2, 2, 2);
+			RegistroController controller = new RegistroController();
+			controller.persistir(registro);
+		}
 }
+		//protected static void removerRegistro(int codRegistro) {
+			//RegistroController controller = new RegistroController();
+			//controller.remover(codRegistro);
+		//}
+		
+		//protected static void alterarRegistro(int codRegistro, String novoNome) {
+		//	RegistroController controller = new RegistroController();
+		//	controller.alterar(codRegistro, novoNome);
+	//	}
+	//	protected static void consultarAluno(int codAluno) {
+	//		RegistroController controller = new RegistroController();
+	//		int codRegistro = 0;
+	//		controller.consultar(codRegistro);
+		//}
+//}
+	
