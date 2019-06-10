@@ -2,30 +2,61 @@ package model;
 
 public class Registro {
 	private int codRegistro;
-	public int getcodOperador; 
-
-	public Registro(String entrada, String saida, int i, int j, int k, int l, int m, int n) 
+	private String entradaSaida;
+	private String data;
+	private String hora;
+	private int codOperador;
+	private int codAutorizacao;
+	private int codAluno;
+	
+	public Registro(String entradaSaida, String data, String hora, int codOperador, int codAutorizacao, int codAluno)
+	
+	
 	{
-	//gerar o construtor
-	}
+		
+	
+		//this.codRegistro;
+		this.entradaSaida=entradaSaida;
+		this.data=data;
+		this.hora=hora;
+		this.codOperador=codOperador;
+		this.codAutorizacao=codAutorizacao;
+		this.codAluno=codAluno;
+		
+		// TODO Auto-generated constructor stub
+	
+}
+
 
 
 	public int getCodRegistro() {
 		return codRegistro;
 	}
 
-	public String getEntrada() {
-		// TODO Auto-generated method stub
-		return getEntrada();
-	}
-	
-	public String getSaida() {
-		// TODO Auto-generated method stub
-		return getSaida();
+	public String getEntradaSaida() {
+		return entradaSaida;
 	}
 
-	public int getcodOperador() {
-		// TODO Auto-generated method stub
-		return getcodOperador;
+	public String getData() {
+		return data;
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public int getCodOperador() {
+		return codOperador;
+	}
+
+	public int getCodAutorizacao() {
+		return codAutorizacao;
+	}
+
+	public int getCodAluno() {
+		return codAluno;
 	}
 }
+	
+
+	

@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+import model.Pessoa;
 import model.Responsavel;
 
 public class ResponsavelRepository {
@@ -31,7 +31,7 @@ public class ResponsavelRepository {
 		String sql = null;
 
 		Statement stmtUpdate;
-	sql = sql.concat(responsavel.getNome());
+		sql = sql.concat(responsavel.getNome());
 		sql = sql.concat("','");
 		sql = sql.concat(responsavel.getCPF());
 		sql = sql.concat("','");

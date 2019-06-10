@@ -5,12 +5,14 @@ import repository.AlunoRepository;
 
 public class AlunoController {
 private AlunoRepository repository;
-private AlunoController controller;
-	
-	public AlunoController() {
+public AlunoController(AlunoController alunoController) {
 		this.repository=new AlunoRepository();
 	}
 		
+	public AlunoController() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void persistir(Aluno aluno) {
 		this.repository.persistir(aluno);
 	}
