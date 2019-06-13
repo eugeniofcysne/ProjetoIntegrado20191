@@ -9,8 +9,8 @@ import model.Responsavel;
 public class Main {
 
 	public static void main(String[] args) {
-		executarAluno();
-		executarResponsavel();
+		//executarAluno();
+		//executarResponsavel();
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("digite o codResponsavel que quer apagar. Ou digite 0 para sair");
 		int decisaoUser = scanner.nextInt();
@@ -58,12 +58,12 @@ public class Main {
 		controller.consultar(codResponsavel);
 	}
 
-	protected static void executarAluno() {
+	//protected static void executarAluno(String nome, String rg, String dataNasc, String codResp, String serie, String codAlu) {
 		// criar objeto aluno
-		Aluno aluno = new Aluno("Pedro de Souza", "6438838", "06/04/1992", 1, "2", 1);
-		AlunoController controller = new AlunoController();
-		controller.persistir(aluno);
+	//	Aluno aluno = new Aluno(nome, rg, dataNasc, codResp, serie, codAlu);
+	//	AlunoController controller = new AlunoController();
+	//	controller.persistir(aluno);
 
-	}
+	//}
 
 }

@@ -22,11 +22,11 @@ public class AlunoRepository {
 		sql = sql.concat(aluno.getDataNascimento());
 		sql = sql.concat("');");
 		System.out.println(sql);
-		Statement stmt;
+		Statement stmtUpdate;
 		ResultSet rs;
 		
 		try {
-			Statement stmtUpdate = conn.createStatement();
+			stmtUpdate = conn.createStatement();
 			stmtUpdate.executeUpdate(sql);
 		} catch (SQLException e1) {
 			e1.printStackTrace();

@@ -6,8 +6,7 @@ public class Aluno extends Pessoa//herdar dados de pessoa
 	private String serieAluno;
 	private int codResponsavel;
 	
-	public Aluno(String nome, String RG, String dataNascimento, 
-			int codResponsavel, String serieAluno, int codAluno) {
+	public Aluno(String nome, String RG, String dataNascimento, int codResponsavel, String serieAluno, int codAluno) {
 		
 		super(nome, RG, dataNascimento);
 		
