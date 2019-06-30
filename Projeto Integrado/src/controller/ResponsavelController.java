@@ -5,11 +5,6 @@ import model.Responsavel;
 import repository.ResponsavelRepository;
 
 public class ResponsavelController {
-	/**
-	 * método para salvar o responsável no repositório
-	 * 
-	 * @param responsavel
-	 */
 
 	private ResponsavelRepository repository;
 
@@ -25,11 +20,11 @@ public class ResponsavelController {
 		this.repository.remover(codResponsavel);
 	}
 
-	public void alterar(int codResponsavel, String novoNome) {
-		this.repository.alterar(codResponsavel, novoNome);
+	public String alterar(int codResponsavel, String novoNome) {
+		return this.repository.alterar(codResponsavel, novoNome);
 	}
 
-	public void consultar(int codResponsavel) {
-		this.repository.consultar(codResponsavel);
+	public String consultar(int codResponsavel) {
+		return this.repository.consultar(codResponsavel);
 	}
 }

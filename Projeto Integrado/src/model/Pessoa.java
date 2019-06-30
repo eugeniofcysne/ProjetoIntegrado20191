@@ -16,11 +16,16 @@ public class Pessoa {
 		this.RG=RG;
 		this.dataNascimento=dataNascimento;
 	}
+
 	public Pessoa(String nome, String RG, String dataNascimento) {
 		this.nome=nome;
 		// this.CPF=null;
 		this.RG=RG;
 		this.dataNascimento=dataNascimento;
+	}
+	public Pessoa(String nome, String CPF) {
+		this.nome=nome;
+		this.CPF=CPF;
 	}
 	public String getNome() {
 		return nome;

@@ -26,9 +26,7 @@ public class CadastroAlunoView extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-	
-	}
+
 
 	/**
 	 * Create the frame.
@@ -54,15 +52,15 @@ public class CadastroAlunoView extends JFrame {
 		frmtdtxtfldSerie.setBounds(42, 92, 107, 22);
 		contentPane.add(frmtdtxtfldSerie);
 		
-		JFormattedTextField frmtdtxtfldCodresponsavel = new JFormattedTextField();
-		frmtdtxtfldCodresponsavel.setText("codResponsavel");
-		frmtdtxtfldCodresponsavel.setBounds(42, 57, 107, 22);
-		contentPane.add(frmtdtxtfldCodresponsavel);
+		JFormattedTextField frmtdtxtfldCodResponsavel = new JFormattedTextField();
+		frmtdtxtfldCodResponsavel.setText("CodResponsavel");
+		frmtdtxtfldCodResponsavel.setBounds(42, 57, 107, 22);
+		contentPane.add(frmtdtxtfldCodResponsavel);
 		
-		JFormattedTextField frmtdtxtfldDatanascimento = new JFormattedTextField();
-		frmtdtxtfldDatanascimento.setText("dataNascimento");
-		frmtdtxtfldDatanascimento.setBounds(42, 130, 107, 22);
-		contentPane.add(frmtdtxtfldDatanascimento);
+		JFormattedTextField frmtdtxtfldDataNascimento = new JFormattedTextField();
+		frmtdtxtfldDataNascimento.setText("dataNascimento");
+		frmtdtxtfldDataNascimento.setBounds(42, 130, 107, 22);
+		contentPane.add(frmtdtxtfldDataNascimento);
 		
 		JFormattedTextField frmtdtxtfldRg = new JFormattedTextField();
 		frmtdtxtfldRg.setToolTipText("RG");
@@ -82,8 +80,8 @@ public class CadastroAlunoView extends JFrame {
 				System.out.println("deu certo");
 				String pegaNome = frmtdtxtfldNome.getText();
 				String pegaRg = frmtdtxtfldRg.getText();
-				String pegaDataNascimento = frmtdtxtfldDatanascimento.getText();
-				int pegaCodResponsavel = Integer.parseInt(frmtdtxtfldCodresponsavel.getText());
+				String pegaDataNascimento = frmtdtxtfldDataNascimento.getText();
+				int pegaCodResponsavel = Integer.parseInt(frmtdtxtfldCodResponsavel.getText());
 				String pegaSerie = frmtdtxtfldSerie.getText();
 				int codAlu=1;
 				
@@ -95,11 +93,6 @@ public class CadastroAlunoView extends JFrame {
 		});
 		btnCadastrar.setBounds(323, 91, 97, 25);
 		contentPane.add(btnCadastrar);
-		
-		JTextPane txtpnCodNovo = new JTextPane();
-		txtpnCodNovo.setText("cod novo:");
-		txtpnCodNovo.setBounds(294, 13, 126, 22);
-		contentPane.add(txtpnCodNovo);
 
 	}
 }

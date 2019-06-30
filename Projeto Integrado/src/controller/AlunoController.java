@@ -7,20 +7,25 @@ import repository.ResponsavelRepository;
 
 public class AlunoController {
 
-private AlunoRepository repository;
-	
+	private AlunoRepository repository;
+
 	public AlunoController() {
-		this.repository=new AlunoRepository();
+		this.repository = new AlunoRepository();
 	}
-		
+
 	public void persistir(Aluno aluno) {
 		this.repository.persistir(aluno);
 	}
-	public Aluno consultar (int id) {
-		return null;
+
+	public void remover(int codAluno) {
+		this.repository.remover(codAluno);
 	}
-	public void remover (int id){
-		
+
+	public String alterar(int codAluno, String novoNome) {
+		return this.repository.alterar(codAluno, novoNome);
+	}
+	
+	public String consultar(int codAluno) {
+		return this.repository.consultar(codAluno);
 	}
 }
-
