@@ -24,7 +24,7 @@ public class ResultadoConsultaRegistroView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+		setTitle("Resultado Consulta Registro");
 		JTextPane txtpnAaaa = new JTextPane();
 		txtpnAaaa.setText("Resultado da consulta: \n"+resultadoRegistro);
 		txtpnAaaa.setBounds(12, 13, 408, 227);

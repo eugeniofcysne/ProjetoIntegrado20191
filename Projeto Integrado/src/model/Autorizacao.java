@@ -2,7 +2,7 @@ package model;
 
 public class Autorizacao {
 	
-	private int codAutorizacao;
+
 	private String motivo;
 	private int codOperador;
 	private String dataAutorizacao;
@@ -22,9 +22,7 @@ public class Autorizacao {
 	
 	}
 
-	public int getCodAutorizacao() {
-		return codAutorizacao;
-	}
+
 
 	public String getMotivo() {
 		return motivo;

@@ -16,7 +16,7 @@ public class AutorizacaoController {
 
 	}
 
-	public void consultar(int codAutorizacao) {
-		this.repository.consultar(codAutorizacao);
+	public String consultar(int codAutorizacao) {
+		return this.repository.consultar(codAutorizacao);
 	}
 }

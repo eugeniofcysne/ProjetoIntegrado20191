@@ -43,6 +43,7 @@ public class AlteracaoResponsavelView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setTitle("Alteração Responsavel");
 		
 		JFormattedTextField frmtdtxtfldDigiteOCdigo = new JFormattedTextField();
 		frmtdtxtfldDigiteOCdigo.setText("Digite o c\u00F3digo de Responsavel a ser modificado");
@@ -63,7 +64,7 @@ public class AlteracaoResponsavelView extends JFrame {
 				String pegaNovoNome=frmtdtxtfldDigiteONovo.getText();
 				String resultadoConsultaResponsavel = responsavelController.alterar(pegaCodResponsavel, pegaNovoNome);
 				Component frame = null;
-				JOptionPane.showMessageDialog(frame, "alterado com sucesso teste");
+				JOptionPane.showMessageDialog(frame, "alterado com sucesso");
 				//JFrame resultadoAlterar = new AlterarResponsavelSucesso(resultadoConsultaResponsavel);
 				
 				

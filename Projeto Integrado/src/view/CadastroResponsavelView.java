@@ -1,9 +1,11 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -24,12 +26,7 @@ public class CadastroResponsavelView extends JFrame {
 
 	private JPanel contentPane;
 	private ResponsavelController responsavelController;
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		
-	}
+
 
 	/**
 	 * Create the frame.
@@ -42,6 +39,7 @@ public class CadastroResponsavelView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setTitle("Cadastro Responsavel");
 		
 		
 		
@@ -97,7 +95,8 @@ public class CadastroResponsavelView extends JFrame {
 								
 				Responsavel responsavel= new Responsavel(pegaNome, pegaCpf, pegaRg, pegaDataNascimento, codResp, pegaEndereco, pegaTelefone, pegaCelular);
 				responsavelController.persistir(responsavel);
-
+				Component frame = null;
+				JOptionPane.showMessageDialog(frame, "cadastrado com sucesso");
 			}
 		});
 		btnCadastrar.setBounds(323, 91, 97, 25);

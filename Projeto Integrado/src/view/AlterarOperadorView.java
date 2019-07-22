@@ -44,6 +44,7 @@ public class AlterarOperadorView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setTitle("Alteração Operador");
 
 		JFormattedTextField frmtdtxtfldDigiteOCdigo = new JFormattedTextField();
 		frmtdtxtfldDigiteOCdigo.setText("Digite o código do operador");
@@ -67,7 +68,7 @@ public class AlterarOperadorView extends JFrame {
 				// String resultadoConsultaOperador =
 				// operadorController.alterar(pegaCodOperador, pegaNovoNome);
 				Component frame = null;
-				JOptionPane.showMessageDialog(frame, "alterado com sucesso teste");
+				JOptionPane.showMessageDialog(frame, "alterado com sucesso");
 				// JFrame resultadoAlterar = new
 				// AlterarResponsavelSucesso(resultadoConsultaResponsavel);
 

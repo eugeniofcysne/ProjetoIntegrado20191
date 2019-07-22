@@ -4,10 +4,13 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
+import view.RelatorioView;
 import controller.AlunoController;
 import controller.RegistroController;
 import controller.ResponsavelController;
 import controller.OperadorController;
+import controller.AutorizacaoController;
+import controller.RelatorioController;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -15,9 +18,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class TelaInicialView {
-
-	private JFrame frame;
+public class TelaInicialView extends JFrame {
 
 	private JFrame cadastroResponsavel; // uma tela chamada "cadastroResponsavel"
 	private JFrame consultaResponsavel; // uma tela chamada "consultaResponsavel"
@@ -31,25 +32,13 @@ public class TelaInicialView {
 
 	private JFrame cadastroRegistro; // uma tela chamada "cadastroRegistro"
 	private JFrame consultaRegistro; // uma tela chamada "consultaRegistro"
+	
+	private JFrame cadastroAutorizacao;
+	private JFrame consultaAutorizacao;
+	
+	private JFrame relatorio;
 
 	private JFrame cadastroOperador;
-
-	/**
-	 * Launch the application.
-	 */
-
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					TelaInicialView window = new TelaInicialView();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the application.
@@ -75,16 +64,24 @@ public class TelaInicialView {
 
 		OperadorController operadorController = new OperadorController();
 		this.cadastroOperador = new CadastroOperadorView(operadorController);
+		
+		AutorizacaoController autorizacaoController = new AutorizacaoController();
+		this.cadastroAutorizacao = new CadastroAutorizacaoView(autorizacaoController);
+		this.consultaAutorizacao = new ConsultaAutorizacaoView(autorizacaoController);
+		
+		RelatorioController relatorioController = new RelatorioController();
+		this.relatorio = new RelatorioView(relatorioController);
+
 	}
 
 	/**
-	 * Initialize the contents of the frame.
+	 * Initialize the contents of the this.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 883, 537);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		this.setBounds(100, 100, 883, 537);
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.getContentPane().setLayout(null);
+		this.setTitle("Tela Inicial");
 
 		// btnCadastroResponsavel
 
@@ -103,7 +100,7 @@ public class TelaInicialView {
 		});
 
 		btnCadastroResponsavel.setBounds(12, 40, 215, 25);
-		frame.getContentPane().add(btnCadastroResponsavel);
+		this.getContentPane().add(btnCadastroResponsavel);
 
 		// btnCadastroAluno.
 
@@ -120,7 +117,7 @@ public class TelaInicialView {
 			}
 		});
 		btnCadastroAluno.setBounds(12, 13, 215, 25);
-		frame.getContentPane().add(btnCadastroAluno);
+		this.getContentPane().add(btnCadastroAluno);
 
 		// btnExclusaoDeAluno
 
@@ -138,7 +135,7 @@ public class TelaInicialView {
 		});
 
 		btnExclusoDeAluno.setBounds(257, 13, 194, 25);
-		frame.getContentPane().add(btnExclusoDeAluno);
+		this.getContentPane().add(btnExclusoDeAluno);
 
 		// btnExclusaoDeResponsavel
 
@@ -149,7 +146,7 @@ public class TelaInicialView {
 			}
 		});
 		btnExclusoDeResponsvel.setBounds(257, 40, 194, 25);
-		frame.getContentPane().add(btnExclusoDeResponsvel);
+		this.getContentPane().add(btnExclusoDeResponsvel);
 
 		// btnConsultaDeAluno
 
@@ -164,7 +161,7 @@ public class TelaInicialView {
 			}
 		});
 		btnConsultaDeAluno.setBounds(463, 13, 177, 25);
-		frame.getContentPane().add(btnConsultaDeAluno);
+		this.getContentPane().add(btnConsultaDeAluno);
 
 		// btnAlterarAluno
 
@@ -180,7 +177,7 @@ public class TelaInicialView {
 		});
 
 		btnAlteraoDeAluno.setBounds(652, 13, 182, 25);
-		frame.getContentPane().add(btnAlteraoDeAluno);
+		this.getContentPane().add(btnAlteraoDeAluno);
 
 		// btnConsultaDeResponsavel
 
@@ -197,7 +194,7 @@ public class TelaInicialView {
 		});
 
 		btnConsultaDeResponsvel.setBounds(463, 40, 177, 25);
-		frame.getContentPane().add(btnConsultaDeResponsvel);
+		this.getContentPane().add(btnConsultaDeResponsvel);
 
 		// btnAlteracaodeResponsavel
 
@@ -214,7 +211,7 @@ public class TelaInicialView {
 		});
 
 		btnAlteraoDeResponsvel.setBounds(652, 40, 182, 25);
-		frame.getContentPane().add(btnAlteraoDeResponsvel);
+		this.getContentPane().add(btnAlteraoDeResponsvel);
 
 		// btnCadastroRegistro
 		
@@ -226,7 +223,7 @@ public class TelaInicialView {
 		});
 
 		btnCadastroRegistro.setBounds(12, 138, 215, 25);
-		frame.getContentPane().add(btnCadastroRegistro);
+		this.getContentPane().add(btnCadastroRegistro);
 
 		
 		// btnConsultaRegistro
@@ -240,7 +237,7 @@ public class TelaInicialView {
 		});
 		
 		btnConsultaRegistro.setBounds(257, 138, 194, 25);
-		frame.getContentPane().add(btnConsultaRegistro);
+		this.getContentPane().add(btnConsultaRegistro);
 
 		// btnCadastroOperador
 
@@ -251,8 +248,50 @@ public class TelaInicialView {
 				cadastroOperador.setVisible(true);
 			}
 		});
-		frame.getContentPane().setLayout(null);
-		frame.getContentPane().add(btnCadastroDeOperador);
+		this.getContentPane().setLayout(null);
+		this.getContentPane().add(btnCadastroDeOperador);
+		
+		
+		//btnRelatorios
+		
+		JButton btnRelatorio = new JButton("Relatorios");
+		btnRelatorio.setBounds(12, 85, 214, 25);
+		btnRelatorio.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				relatorio.setVisible(true);
+			}
+		});
+		
+		btnRelatorio.setBounds(96, 246, 97, 25);
+		this.getContentPane().add(btnRelatorio);
+		
+		// btnCadastroAutorizacao
+		
+		JButton btnCadastroAutorizacao = new JButton("Cadastro de Autoriza\u00E7\u00E3o");
+		btnCadastroAutorizacao.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				cadastroAutorizacao.setVisible(true);
+			}
+		});
+		
+		
+		btnCadastroAutorizacao.setBounds(12, 176, 215, 25);
+		this.getContentPane().add(btnCadastroAutorizacao);
+		
+		
+		//btnConsultaAutorizacao
+		
+		JButton btnConsultaAutorizacao = new JButton("Consulta de Autoriza\u00E7\u00E3o");
+		
+		btnConsultaAutorizacao.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				consultaAutorizacao.setVisible(true);
+			}
+		});
+		
+		
+		btnConsultaAutorizacao.setBounds(257, 176, 194, 25);
+		this.getContentPane().add(btnConsultaAutorizacao);
 
 	}
 }

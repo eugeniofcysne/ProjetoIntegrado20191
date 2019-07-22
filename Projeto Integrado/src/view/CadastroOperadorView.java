@@ -25,6 +25,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JTextPane;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JFormattedTextField;
 import javax.swing.JTextArea;
 import javax.swing.JToggleButton;
@@ -48,6 +49,7 @@ public class CadastroOperadorView extends JFrame {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
+		setTitle("Cadastro Operador");
 		
 		JLabel lblNome = new JLabel("Nome: ");
 		lblNome.setBounds(12, 72, 56, 16);
@@ -104,7 +106,8 @@ public class CadastroOperadorView extends JFrame {
 				Operador operador = new Operador(pegaNome, pegaCpf, pegaTurno, pegaSetor);
 				operadorController.persistir(operador);
 				
-		
+				Component frame = null;
+				JOptionPane.showMessageDialog(frame, "cadastrado com sucesso");
 	
 			}
 		});		

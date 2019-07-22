@@ -33,6 +33,7 @@ public class ConsultaRegistroView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setTitle("Consulta Registro");
 		
 		JFormattedTextField frmtdtxtfldCodigoParaConsultar = new JFormattedTextField();
 		frmtdtxtfldCodigoParaConsultar.setText("Digite o c\u00F3digo do registro a ser consultado. ");

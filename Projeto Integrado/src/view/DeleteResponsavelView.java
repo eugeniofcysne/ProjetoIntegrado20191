@@ -1,11 +1,13 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -40,7 +42,7 @@ public class DeleteResponsavelView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+		setTitle("Excluir Responsavel");
 		
 		JFormattedTextField frmtdtxtfldCodigoParaDeletar = new JFormattedTextField();
 		frmtdtxtfldCodigoParaDeletar.setText("Digite o c\u00F3digo do responsavel a ser exclu\u00EDdo. ");
@@ -54,7 +56,8 @@ public class DeleteResponsavelView extends JFrame {
 				System.out.println("excluindo responsavel");
 				int pegaCodResponsavel = Integer.parseInt(frmtdtxtfldCodigoParaDeletar.getText());
 				responsavelController.remover(pegaCodResponsavel);
-				System.out.println("responsavel cód "+ pegaCodResponsavel + " excluído com sucesso.");
+				Component frame = null;
+				JOptionPane.showMessageDialog(frame, "excluído com sucesso ");
 			}
 		});
 		btnDeleteResponsavel.setBounds(28, 117, 97, 25);

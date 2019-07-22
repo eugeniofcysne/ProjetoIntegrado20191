@@ -1,11 +1,13 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -40,6 +42,7 @@ public class DeleteAlunoView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setTitle("Excluir Aluno");
 		
 		
 		JFormattedTextField frmtdtxtfldCodigoParaDeletar = new JFormattedTextField();
@@ -54,7 +57,8 @@ public class DeleteAlunoView extends JFrame {
 				System.out.println("excluindo aluno");
 				int pegaCodAluno = Integer.parseInt(frmtdtxtfldCodigoParaDeletar.getText());
 				alunoController.remover(pegaCodAluno);
-				System.out.println("aluno cód "+ pegaCodAluno + " excluído com sucesso.");
+				Component frame = null;
+				JOptionPane.showMessageDialog(frame, "excluído com sucesso ");
 			}
 		});
 		btnDeleteAluno.setBounds(28, 117, 97, 25);

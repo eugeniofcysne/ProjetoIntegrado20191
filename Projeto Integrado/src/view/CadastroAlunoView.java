@@ -1,11 +1,13 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -39,6 +41,7 @@ public class CadastroAlunoView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setTitle("Cadastro Aluno");
 		
 		
 		JFormattedTextField frmtdtxtfldNome = new JFormattedTextField();
@@ -88,6 +91,8 @@ public class CadastroAlunoView extends JFrame {
 				
 				Aluno aluno = new Aluno(pegaNome, pegaRg, pegaDataNascimento, pegaCodResponsavel, pegaSerie, codAlu);
 				alunoController.persistir(aluno);
+				Component frame = null;
+				JOptionPane.showMessageDialog(frame, "cadastrado com sucesso");
 				//executarAluno(
 			}
 		});

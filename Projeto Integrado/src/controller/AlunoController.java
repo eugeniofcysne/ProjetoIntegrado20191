@@ -1,9 +1,7 @@
 package controller;
 
 import model.Aluno;
-import model.Responsavel;
 import repository.AlunoRepository;
-import repository.ResponsavelRepository;
 
 public class AlunoController {
 

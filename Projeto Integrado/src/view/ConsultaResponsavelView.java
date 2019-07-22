@@ -36,6 +36,7 @@ public class ConsultaResponsavelView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setTitle("Consulta Responsavel");
 		
 		
 		JFormattedTextField frmtdtxtfldCodigoParaConsultar = new JFormattedTextField();

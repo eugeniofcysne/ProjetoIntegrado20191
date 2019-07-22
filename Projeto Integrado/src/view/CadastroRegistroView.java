@@ -1,11 +1,13 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -40,6 +42,7 @@ public class CadastroRegistroView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setTitle("Cadastro Registro");
 		
 		
 		JFormattedTextField frmtdtxtfldEntSai = new JFormattedTextField();
@@ -95,6 +98,9 @@ public class CadastroRegistroView extends JFrame {
 				
 				Registro registro = new Registro(entSai, dat, hor, codOper, codAutor, codAlu);
 				registroController.persistir(registro);
+				
+				Component frame = null;
+				JOptionPane.showMessageDialog(frame, "cadastrado com sucesso");
 				//executarRegistro(
 			}
 		});

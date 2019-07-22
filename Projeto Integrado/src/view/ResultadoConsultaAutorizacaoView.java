@@ -1,35 +1,25 @@
 package view;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextPane;
 import javax.swing.border.EmptyBorder;
 
-public class AlterarAlunoSucesso extends JFrame {
-
+public class ResultadoConsultaAutorizacaoView extends JFrame {
+	
 	private JPanel contentPane;
-
-
-	/**
-	 * Create the frame.
-	 */
-	public AlterarAlunoSucesso(String resultadoAlterar) {
+	public ResultadoConsultaAutorizacaoView(String resultadoAutorizacao) {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		setTitle("Sucesso");
-		
+		contentPane.setLayout(null);
+		setTitle("Resultado Consulta Autorizacao");
 		JTextPane txtpnAaaa = new JTextPane();
-		txtpnAaaa.setText(resultadoAlterar);
+		txtpnAaaa.setText("Resultado da consulta: \n"+resultadoAutorizacao);
 		txtpnAaaa.setBounds(12, 13, 408, 227);
 		contentPane.add(txtpnAaaa);
 		this.setVisible(true);
 	}
-
 }

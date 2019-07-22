@@ -1,9 +1,11 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JFormattedTextField;
@@ -40,6 +42,7 @@ public class AlteracaoAlunoView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setTitle("Alteração Aluno");
 		
 		JFormattedTextField frmtdtxtfldDigiteOCdigo = new JFormattedTextField();
 		frmtdtxtfldDigiteOCdigo.setText("Digite o c\u00F3digo de Aluno a ser modificado");
@@ -59,8 +62,9 @@ public class AlteracaoAlunoView extends JFrame {
 				int pegaCodAluno = Integer.parseInt(frmtdtxtfldDigiteOCdigo.getText());
 				String pegaNovoNome=frmtdtxtfldDigiteONovo.getText();
 				String resultadoConsultaAluno = alunoController.alterar(pegaCodAluno, pegaNovoNome);
-				JFrame resultadoAlterar = new AlterarAlunoSucesso(resultadoConsultaAluno);
-				
+				//JFrame resultadoAlterar = new AlterarAlunoSucesso(resultadoConsultaAluno);
+				Component frame = null;
+				JOptionPane.showMessageDialog(frame, "alterado com sucesso ");
 				
 			}
 		});

@@ -14,13 +14,13 @@ public class AlunoRepository {
 		String sql = "insert into aluno values (null, '";
 		sql = sql.concat(aluno.getNome());
 		sql = sql.concat("','");
-		sql = sql.concat(Integer.toString(aluno.getCodResponsavel()));// metodo para converter inteiro e string
+		sql = sql.concat(aluno.getRG());// metodo para converter inteiro e string
 		sql = sql.concat("','");
 		sql = sql.concat(aluno.getSerieAluno());
 		sql = sql.concat("','");
 		sql = sql.concat(aluno.getDataNascimento());
 		sql = sql.concat("','");
-		sql = sql.concat(aluno.getDataNascimento());
+		sql = sql.concat(Integer.toString(aluno.getCodResponsavel()));// metodo para converter inteiro e string
 		sql = sql.concat("');");
 		System.out.println(sql);
 		Statement stmtUpdate;

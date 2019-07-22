@@ -22,7 +22,7 @@ public class ResultadoConsultaAlunoView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+		setTitle("Resultado Consulta Aluno");
 		JTextPane txtpnAaaa = new JTextPane();
 		txtpnAaaa.setText("Resultado da consulta: \n"+resultadoAluno);
 		txtpnAaaa.setBounds(12, 13, 408, 227);
